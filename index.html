@@ -132,7 +132,7 @@
             </div>
 
             <div class="clear">
-              <input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="OK" onclick="ga('send', 'event', 'signup', 'completeSignup', 'submitButton'); index.toggleElement('modal'); goog_report_conversion();">
+              <input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="OK" onclick="ga('send', 'event', 'signup', 'completeSignup', 'submitButton'); index.toggleElement('modal'); goog_report_conversion(); fbTrack()">
             </div>
           </div>
 
@@ -162,6 +162,27 @@
 
     index.autoResizeElement('header > div > div');
   </script>
+
+  <!-- Facebook Conversion Code for Email signup -->
+<script>
+(function() {
+var _fbq = window._fbq || (window._fbq = []);
+if (!_fbq.loaded) {
+var fbds = document.createElement('script');
+fbds.async = true;
+fbds.src = '//connect.facebook.net/en_US/fbds.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(fbds, s);
+_fbq.loaded = true;
+}
+})();
+window._fbq = window._fbq || [];
+var fbTrack = function() {
+  return window._fbq.push(['track', '6040212362280', {'value':'0.00','currency':'SEK'}]);
+}
+
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6040212362280&amp;cd[value]=0.00&amp;cd[currency]=SEK&amp;noscript=1" /></noscript>
 
   <!-- Google Code for Email submitted Conversion Page
 In your html page, add the snippet and call
