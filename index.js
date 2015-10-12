@@ -1,4 +1,6 @@
 var index = (function() {
+  'use strict';
+
   function scaleElementHeight(el) {
     el.style.height = (window.innerHeight + 5) + 'px';
   }

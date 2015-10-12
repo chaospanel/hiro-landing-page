@@ -151,6 +151,24 @@ section > div > div > div > a {
   min-width: 256px;
 }
 
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+}
+
 a[title="SumoMe"] {
   visibility: hidden;
 }
